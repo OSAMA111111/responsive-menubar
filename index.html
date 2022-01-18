@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://kit.fontawesome.com/3110df4ceb.js" crossorigin="anonymous"></script>
+    
+    <title>MENU BAR</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">Styles</div>
+        <input type="checkbox" id="click">
+             <!-- this for attribute is too hard just type lable and give enter it will open label tag with for attribute -->
+        <label for="click" class="menu-btn">      
+            <img src="15.svg">
+        </label>
+       
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About Us</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Target</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Gallery</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">Images</a> <i class="fas fa-plus"></i>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">HD IMAGES</a></li>
+                                    <li><a href="#">FHD IMAGES</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+</body>
+</html>

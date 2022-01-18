@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+height: 50px;
+width:100%;
+background: green;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 1;
+flex-wrap:wrap;
+padding: 0px 50px 0px 100px;
+}
+.logo{
+    font-size: 39px;
+    font-weight: bolder;
+    font-style: italic;
+    color: turquoise;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+
+}
+.menu ul li{
+    margin: 0 5px;
+    padding: 10px;
+}
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.active,.menu ul li a:hover{
+    color: aquamarine;
+    background-color: forestgreen;
+    border-radius: 8px;
+}
+.menu-btn img{
+    color: azure;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    width: 20px;
+}
+#click{
+    display: none;
+}
+.sub-menu{
+    display: none;
+}
+.menu ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: green;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+.menu ul li:hover .sub-menu ul{
+    display:block;
+    margin: 10px;
+}
+.menu ul li:hover .sub-menu ul li{
+    
+    border: 0px;
+  
+}
+.sub-menu-1{
+    display: none;
+}
+.menu ul li:hover .sub-menu ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-left: -192px;
+    margin-top: -14px;
+    color: black;
+    background-color: green;
+}
+.menu ul li:hover .sub-menu ul li:hover .sub-menu-1 ul{
+    display: block;
+    padding: 0%;
+}
+@media (max-width:1000px) {
+    .menu-btn img{
+        display:block;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    .menu ul{
+        position:fixed;
+        top:50px;
+        left: -100%;
+        background:green;
+        width: 35%;
+        display: block;
+        height: 100vh;
+        text-align:center;
+    }
+    .menu ul li{
+        display: block;
+       position: relative;
+       margin: 20px 0px;
+    }
+    .menu ul li a{
+        font-size: 20px;
+     
+    }
+     .menu .sub-menu{
+         width: 100%;
+         position:relative;
+     }
+     .menu ul li ul{
+        width:100%;
+        display: block;
+        text-align:center;
+        z-index: 1;
+        position: relative;
+        left: -15px;
+        top:-10px; 
+    }
+    .menu .sub-menu-1{
+        width: 100%;
+        position: relative;
+        top:64px;
+        left: 197px;
+     
+    }
+    .menu ul li ul li ul{
+        display: block;
+        text-align:center;
+        /* z-index: 2; */
+        position: relative;
+        left: -10px;
+        top:-10px;
+        width: 100%;   
+    }
+   
+}
+
+@media (max-width:420px) {
+    .menu-btn img{
+        display:block;
+    }
+    .menu ul{
+        position: fixed;
+        top:50px;
+        left: -100%;
+        background: green;
+
+        height: 100vh;
+        width: 43%;
+        display: block;
+        text-align: center;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    .menu ul li{
+        margin: 20px 0px;
+        padding: 6px;
+    }
+    .menu ul li a{
+        font-size: 20px;
+        display: block;
+    }
+}
+
+
+
+
+
+
+/* .menu ul li ul{
+    width:100%;
+    display: block;
+    text-align:center;
+    z-index: 1;
+    position: relative;
+    left: -15PX;
+    top:-10px; 
+}
+.menu .sub-menu-1{
+    width: 100%;
+    background-color: none;
+}
+.menu ul li ul li ul{
+    display: block;
+    text-align:center;
+    /* z-index: 2; */
+    /* position: relative;
+    left: 80%;
+    top:10px;
+    width: 100%;   
+} */ 
